@@ -191,7 +191,12 @@ class DashboardScreen extends StatelessWidget {
                                       onPressed: () {
                                         viewModel.addPage();
                                       },
-                                      child: Text(AppStrings.showMore),
+                                      child: Text(
+                                        AppStrings.showMore,
+                                        style: getRegularStyle(
+                                          color: ColorManager.white,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                   const SizedBox(

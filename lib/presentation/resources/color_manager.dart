@@ -19,7 +19,7 @@ class ColorManager {
   static Color error = HexColor.fromHex("#DB0000");
   static Color errorOpacity15 = HexColor.fromHex("#c71602");
   static Color cardStartColor = HexColor.fromHex("#EDEFFF");
-  static Color cardEndColor = HexColor.fromHex("#34AFB9C8");
+  static Color cardEndColor = HexColor.fromHex("#EDEFFA");
   static Color approvedColor = HexColor.fromHex("#D3F1DF");
   static Color rejectedColor = HexColor.fromHex("#FFB0B0");
 
