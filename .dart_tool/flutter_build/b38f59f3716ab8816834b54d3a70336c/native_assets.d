@@ -1,0 +1,1 @@
+ /Users/hadyalkahlout/Documents/Doc/Work/Teqani/teqani/.dart_tool/flutter_build/b38f59f3716ab8816834b54d3a70336c/native_assets.yaml: 

@@ -1,0 +1,29 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'qaqc_approval_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+QaqcApprovalResponse _$QaqcApprovalResponseFromJson(
+        Map<String, dynamic> json) =>
+    QaqcApprovalResponse()
+      ..noSetupWirContractorQAQCApproval =
+          json['noSetupWIRContractorQAQCApproval'] == null
+              ? null
+              : GenericResponse.fromJson(
+                  json['noSetupWIRContractorQAQCApproval']
+                      as Map<String, dynamic>)
+      ..wirContractorQAQCApproval = json['wirContractorQAQCApproval'] == null
+          ? null
+          : GenericResponse.fromJson(
+              json['wirContractorQAQCApproval'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$QaqcApprovalResponseToJson(
+        QaqcApprovalResponse instance) =>
+    <String, dynamic>{
+      'noSetupWIRContractorQAQCApproval':
+          instance.noSetupWirContractorQAQCApproval,
+      'wirContractorQAQCApproval': instance.wirContractorQAQCApproval,
+    };

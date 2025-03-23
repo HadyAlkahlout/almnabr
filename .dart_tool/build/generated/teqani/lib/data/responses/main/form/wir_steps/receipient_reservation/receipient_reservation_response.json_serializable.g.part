@@ -1,0 +1,24 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ReceipientReservationResponse _$ReceipientReservationResponseFromJson(
+        Map<String, dynamic> json) =>
+    ReceipientReservationResponse()
+      ..noSetupWIRReceipientReservation =
+          json['noSetupWIRReceipientReservation'] == null
+              ? null
+              : GenericResponse.fromJson(json['noSetupWIRReceipientReservation']
+                  as Map<String, dynamic>)
+      ..wirReceipientReservation = json['wirReceipientReservation'] == null
+          ? null
+          : GenericResponse.fromJson(
+              json['wirReceipientReservation'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$ReceipientReservationResponseToJson(
+        ReceipientReservationResponse instance) =>
+    <String, dynamic>{
+      'noSetupWIRReceipientReservation':
+          instance.noSetupWIRReceipientReservation,
+      'wirReceipientReservation': instance.wirReceipientReservation,
+    };

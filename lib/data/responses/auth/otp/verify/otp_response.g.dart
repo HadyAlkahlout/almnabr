@@ -1,0 +1,51 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'otp_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+OtpResponse _$OtpResponseFromJson(Map<String, dynamic> json) => OtpResponse()
+  ..verifyOtp = json['verifyOtp'] == null
+      ? null
+      : VerifyOtpResponse.fromJson(json['verifyOtp'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$OtpResponseToJson(OtpResponse instance) =>
+    <String, dynamic>{
+      'verifyOtp': instance.verifyOtp,
+    };
+
+VerifyOtpResponse _$VerifyOtpResponseFromJson(Map<String, dynamic> json) =>
+    VerifyOtpResponse()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..token = json['token'] as String?
+      ..userData = json['data'] == null
+          ? null
+          : UserDataResponse.fromJson(json['data'] as Map<String, dynamic>)
+      ..typeName = json['__typename'] as String?;
+
+Map<String, dynamic> _$VerifyOtpResponseToJson(VerifyOtpResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'token': instance.token,
+      'data': instance.userData,
+      '__typename': instance.typeName,
+    };
+
+UserDataResponse _$UserDataResponseFromJson(Map<String, dynamic> json) =>
+    UserDataResponse()
+      ..name = json['name'] as String?
+      ..email = json['email'] as String?
+      ..mobile = json['mobile'] as String?
+      ..typeName = json['__typename'] as String?;
+
+Map<String, dynamic> _$UserDataResponseToJson(UserDataResponse instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'email': instance.email,
+      'mobile': instance.mobile,
+      '__typename': instance.typeName,
+    };

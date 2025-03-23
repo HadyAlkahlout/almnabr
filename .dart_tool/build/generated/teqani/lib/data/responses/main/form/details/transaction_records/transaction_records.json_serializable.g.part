@@ -1,0 +1,43 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+TransactionRecords _$TransactionRecordsFromJson(Map<String, dynamic> json) =>
+    TransactionRecords()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..paging = json['paging'] == null
+          ? null
+          : Paging.fromJson(json['paging'] as Map<String, dynamic>)
+      ..data = (json['data'] as List<dynamic>?)
+          ?.map((e) => TransactionRecord.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$TransactionRecordsToJson(TransactionRecords instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'paging': instance.paging,
+      'data': instance.data,
+    };
+
+TransactionRecord _$TransactionRecordFromJson(Map<String, dynamic> json) =>
+    TransactionRecord()
+      ..id = (json['id'] as num?)?.toInt()
+      ..transactionStepName = json['transaction_step_name'] as String?
+      ..notes = json['notes'] as String?
+      ..writer = json['writer'] == null
+          ? null
+          : Writer.fromJson(json['writer'] as Map<String, dynamic>)
+      ..createdAt = json['created_at'] as String?
+      ..updatedAt = json['updated_at'] as String?;
+
+Map<String, dynamic> _$TransactionRecordToJson(TransactionRecord instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'transaction_step_name': instance.transactionStepName,
+      'notes': instance.notes,
+      'writer': instance.writer,
+      'created_at': instance.createdAt,
+      'updated_at': instance.updatedAt,
+    };

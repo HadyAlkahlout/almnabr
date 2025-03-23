@@ -1,0 +1,43 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'positions_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+PositionsResponse _$PositionsResponseFromJson(Map<String, dynamic> json) =>
+    PositionsResponse()
+      ..positions = json['searchPositionsOnConstruction'] == null
+          ? null
+          : Positions.fromJson(
+              json['searchPositionsOnConstruction'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$PositionsResponseToJson(PositionsResponse instance) =>
+    <String, dynamic>{
+      'searchPositionsOnConstruction': instance.positions,
+    };
+
+Positions _$PositionsFromJson(Map<String, dynamic> json) => Positions()
+  ..status = json['status'] as bool?
+  ..message = json['message'] as String?
+  ..data = (json['data'] as List<dynamic>?)
+      ?.map((e) => PositionData.fromJson(e as Map<String, dynamic>))
+      .toList();
+
+Map<String, dynamic> _$PositionsToJson(Positions instance) => <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+PositionData _$PositionDataFromJson(Map<String, dynamic> json) => PositionData()
+  ..id = json['id'] as String?
+  ..title = json['title'] as String?;
+
+Map<String, dynamic> _$PositionDataToJson(PositionData instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'isSelected': instance.isSelected,
+    };

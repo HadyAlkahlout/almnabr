@@ -1,0 +1,81 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'previous_versions_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+PreviousVersionsResponse _$PreviousVersionsResponseFromJson(
+        Map<String, dynamic> json) =>
+    PreviousVersionsResponse()
+      ..previousVersions = json['getWIRUnitsPreviousVersions'] == null
+          ? null
+          : PreviousVersions.fromJson(
+              json['getWIRUnitsPreviousVersions'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$PreviousVersionsResponseToJson(
+        PreviousVersionsResponse instance) =>
+    <String, dynamic>{
+      'getWIRUnitsPreviousVersions': instance.previousVersions,
+    };
+
+PreviousVersions _$PreviousVersionsFromJson(Map<String, dynamic> json) =>
+    PreviousVersions()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..data = (json['data'] as List<dynamic>?)
+          ?.map((e) => PreviousVersion.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$PreviousVersionsToJson(PreviousVersions instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+PreviousVersion _$PreviousVersionFromJson(Map<String, dynamic> json) =>
+    PreviousVersion()
+      ..transactionId = json['transaction_id'] as String?
+      ..formKey = json['form_key'] as String?
+      ..formType = json['form_type'] as String?
+      ..units = json['units'] as String?
+      ..workLevels = json['worklevels'] as String?
+      ..resultCode = json['result_code'] as String?
+      ..resubmittedTransactionId =
+          (json['resubmited_transaction_id'] as num?)?.toInt()
+      ..unitWlVersion = json['unit_wl_version'] as String?
+      ..tbvCount = json['tbv_count'] as String?
+      ..pdf = json['pdf'] == null
+          ? null
+          : Pdf.fromJson(json['pdf'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$PreviousVersionToJson(PreviousVersion instance) =>
+    <String, dynamic>{
+      'transaction_id': instance.transactionId,
+      'form_key': instance.formKey,
+      'form_type': instance.formType,
+      'units': instance.units,
+      'worklevels': instance.workLevels,
+      'result_code': instance.resultCode,
+      'resubmited_transaction_id': instance.resubmittedTransactionId,
+      'unit_wl_version': instance.unitWlVersion,
+      'tbv_count': instance.tbvCount,
+      'pdf': instance.pdf,
+    };
+
+Pdf _$PdfFromJson(Map<String, dynamic> json) => Pdf()
+  ..filePath = json['file_path'] as String?
+  ..fileSize = (json['file_size'] as num?)?.toDouble()
+  ..fileExtension = json['file_extension'] as String?
+  ..titleEn = json['title_en'] as String?
+  ..titleAr = json['title_ar'] as String?;
+
+Map<String, dynamic> _$PdfToJson(Pdf instance) => <String, dynamic>{
+      'file_path': instance.filePath,
+      'file_size': instance.fileSize,
+      'file_extension': instance.fileExtension,
+      'title_en': instance.titleEn,
+      'title_ar': instance.titleAr,
+    };

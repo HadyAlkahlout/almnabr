@@ -1,0 +1,64 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+TransactionTechnicalAssistance _$TransactionTechnicalAssistanceFromJson(
+        Map<String, dynamic> json) =>
+    TransactionTechnicalAssistance()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..paging = json['paging'] == null
+          ? null
+          : Paging.fromJson(json['paging'] as Map<String, dynamic>)
+      ..data = (json['data'] as List<dynamic>?)
+          ?.map(
+              (e) => TechnicalAssistantData.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$TransactionTechnicalAssistanceToJson(
+        TransactionTechnicalAssistance instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'paging': instance.paging,
+      'data': instance.data,
+    };
+
+TechnicalAssistantData _$TechnicalAssistantDataFromJson(
+        Map<String, dynamic> json) =>
+    TechnicalAssistantData()
+      ..id = (json['id'] as num?)?.toInt()
+      ..stepName = json['step_name'] as String?
+      ..assistanceType = json['assistance_type'] as String?
+      ..customKey = json['custom_key'] as String?
+      ..customVal = json['custom_val'] as String?
+      ..titleEn = json['title_en'] as String?
+      ..titleAr = json['title_ar'] as String?
+      ..status = json['status'] as String?
+      ..result = json['result'] as String?
+      ..attachment = json['attachment'] == null
+          ? null
+          : Attachment.fromJson(json['attachment'] as Map<String, dynamic>)
+      ..writer = json['writer'] == null
+          ? null
+          : Writer.fromJson(json['writer'] as Map<String, dynamic>)
+      ..createdAt = json['created_at'] as String?
+      ..updatedAt = json['updated_at'] as String?;
+
+Map<String, dynamic> _$TechnicalAssistantDataToJson(
+        TechnicalAssistantData instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'step_name': instance.stepName,
+      'assistance_type': instance.assistanceType,
+      'custom_key': instance.customKey,
+      'custom_val': instance.customVal,
+      'title_en': instance.titleEn,
+      'title_ar': instance.titleAr,
+      'status': instance.status,
+      'result': instance.result,
+      'attachment': instance.attachment,
+      'writer': instance.writer,
+      'created_at': instance.createdAt,
+      'updated_at': instance.updatedAt,
+    };

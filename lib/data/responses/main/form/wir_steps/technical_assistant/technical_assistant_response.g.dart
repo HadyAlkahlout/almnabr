@@ -1,0 +1,30 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'technical_assistant_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+TechnicalAssistantResponse _$TechnicalAssistantResponseFromJson(
+        Map<String, dynamic> json) =>
+    TechnicalAssistantResponse()
+      ..noSetupWirTechnicalAssistant =
+          json['noSetupWIRTechnicalAssistanceTransaction'] == null
+              ? null
+              : GenericResponse.fromJson(
+                  json['noSetupWIRTechnicalAssistanceTransaction']
+                      as Map<String, dynamic>)
+      ..wirTechnicalAssistant = json['wirTechnicalAssistanceTransaction'] ==
+              null
+          ? null
+          : GenericResponse.fromJson(json['wirTechnicalAssistanceTransaction']
+              as Map<String, dynamic>);
+
+Map<String, dynamic> _$TechnicalAssistantResponseToJson(
+        TechnicalAssistantResponse instance) =>
+    <String, dynamic>{
+      'noSetupWIRTechnicalAssistanceTransaction':
+          instance.noSetupWirTechnicalAssistant,
+      'wirTechnicalAssistanceTransaction': instance.wirTechnicalAssistant,
+    };

@@ -1,0 +1,69 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_users_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+GetUsersResponse _$GetUsersResponseFromJson(Map<String, dynamic> json) =>
+    GetUsersResponse()
+      ..getStepUsers = json['getStepUsersBySteps'] == null
+          ? null
+          : GetUsers.fromJson(
+              json['getStepUsersBySteps'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$GetUsersResponseToJson(GetUsersResponse instance) =>
+    <String, dynamic>{
+      'getStepUsersBySteps': instance.getStepUsers,
+    };
+
+GetUsers _$GetUsersFromJson(Map<String, dynamic> json) => GetUsers()
+  ..status = json['status'] as bool?
+  ..message = json['message'] as String?
+  ..assignManualUser = json['assign_manual_user'] as String?
+  ..currentStep = json['current_step'] as String?
+  ..currentStepName = json['current_step_name'] as String?
+  ..users = (json['users'] as List<dynamic>?)
+      ?.map((e) => User.fromJson(e as Map<String, dynamic>))
+      .toList()
+  ..systemUsers = (json['system_users'] as List<dynamic>?)
+      ?.map((e) => User.fromJson(e as Map<String, dynamic>))
+      .toList()
+  ..customUsers = (json['custom_users'] as List<dynamic>?)
+      ?.map((e) => User.fromJson(e as Map<String, dynamic>))
+      .toList();
+
+Map<String, dynamic> _$GetUsersToJson(GetUsers instance) => <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'assign_manual_user': instance.assignManualUser,
+      'current_step': instance.currentStep,
+      'current_step_name': instance.currentStepName,
+      'users': instance.users,
+      'system_users': instance.systemUsers,
+      'custom_users': instance.customUsers,
+    };
+
+User _$UserFromJson(Map<String, dynamic> json) => User()
+  ..id = (json['id'] as num?)?.toInt()
+  ..userId = (json['user_id'] as num?)?.toInt()
+  ..name = json['name'] as String?
+  ..mobile = json['mobile'] as String?
+  ..email = json['email'] as String?
+  ..customUser = json['custom_user'] as String?
+  ..position = (json['position'] as num?)?.toInt()
+  ..positionTitleEn = json['position_title_en'] as String?
+  ..positionTitleAr = json['position_title_ar'] as String?;
+
+Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+      'id': instance.id,
+      'user_id': instance.userId,
+      'name': instance.name,
+      'mobile': instance.mobile,
+      'email': instance.email,
+      'custom_user': instance.customUser,
+      'position': instance.position,
+      'position_title_en': instance.positionTitleEn,
+      'position_title_ar': instance.positionTitleAr,
+    };

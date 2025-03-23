@@ -1,0 +1,30 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'manager_approval_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ManagerApprovalResponse _$ManagerApprovalResponseFromJson(
+        Map<String, dynamic> json) =>
+    ManagerApprovalResponse()
+      ..noSetupWirContractorManagerApproval =
+          json['noSetupWIRContractorManagerApproval'] == null
+              ? null
+              : GenericResponse.fromJson(
+                  json['noSetupWIRContractorManagerApproval']
+                      as Map<String, dynamic>)
+      ..wirContractorManagerApproval =
+          json['wirContractorManagerApproval'] == null
+              ? null
+              : GenericResponse.fromJson(
+                  json['wirContractorManagerApproval'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$ManagerApprovalResponseToJson(
+        ManagerApprovalResponse instance) =>
+    <String, dynamic>{
+      'noSetupWIRContractorManagerApproval':
+          instance.noSetupWirContractorManagerApproval,
+      'wirContractorManagerApproval': instance.wirContractorManagerApproval,
+    };

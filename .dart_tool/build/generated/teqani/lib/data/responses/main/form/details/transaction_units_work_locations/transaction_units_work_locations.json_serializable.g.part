@@ -1,0 +1,162 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+TransactionUnitsWorkLocations _$TransactionUnitsWorkLocationsFromJson(
+        Map<String, dynamic> json) =>
+    TransactionUnitsWorkLocations()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..paging = json['paging'] == null
+          ? null
+          : Paging.fromJson(json['paging'] as Map<String, dynamic>)
+      ..data = (json['data'] as List<dynamic>?)
+          ?.map((e) => WorkData.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$TransactionUnitsWorkLocationsToJson(
+        TransactionUnitsWorkLocations instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'paging': instance.paging,
+      'data': instance.data,
+    };
+
+WorkData _$WorkDataFromJson(Map<String, dynamic> json) => WorkData()
+  ..id = (json['id'] as num?)?.toInt()
+  ..transactionId = json['transaction_id'] as String?
+  ..projectId = json['project_id'] as String?
+  ..formType = json['form_type'] as String?
+  ..activityId = json['activity_id'] as String?
+  ..activity = json['activity'] == null
+      ? null
+      : Activity.fromJson(json['activity'] as Map<String, dynamic>)
+  ..templateId = json['template_id'] as String?
+  ..template = json['template'] == null
+      ? null
+      : Template.fromJson(json['template'] as Map<String, dynamic>)
+  ..unitId = json['unit_id'] as String?
+  ..unit = json['unit'] == null
+      ? null
+      : Unit.fromJson(json['unit'] as Map<String, dynamic>)
+  ..workLevelId = json['work_level_id'] as String?
+  ..worklevel = json['worklevel'] == null
+      ? null
+      : Worklevel.fromJson(json['worklevel'] as Map<String, dynamic>)
+  ..workLevelQuantity = json['work_level_quantity'] as String?
+  ..worklevelPrice = json['worklevel_price'] as String?
+  ..worklevelTotalPrice = json['worklevel_total_price'] as String?
+  ..workLevelRatio = json['work_level_ratio']
+  ..quantities = (json['quantities'] as List<dynamic>?)
+      ?.map((e) => Quantities.fromJson(e as Map<String, dynamic>))
+      .toList()
+  ..attachment = (json['attachment'] as List<dynamic>?)
+      ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
+      .toList();
+
+Map<String, dynamic> _$WorkDataToJson(WorkData instance) => <String, dynamic>{
+      'id': instance.id,
+      'transaction_id': instance.transactionId,
+      'project_id': instance.projectId,
+      'form_type': instance.formType,
+      'activity_id': instance.activityId,
+      'activity': instance.activity,
+      'template_id': instance.templateId,
+      'template': instance.template,
+      'unit_id': instance.unitId,
+      'unit': instance.unit,
+      'work_level_id': instance.workLevelId,
+      'worklevel': instance.worklevel,
+      'work_level_quantity': instance.workLevelQuantity,
+      'worklevel_price': instance.worklevelPrice,
+      'worklevel_total_price': instance.worklevelTotalPrice,
+      'work_level_ratio': instance.workLevelRatio,
+      'quantities': instance.quantities,
+      'attachment': instance.attachment,
+    };
+
+Template _$TemplateFromJson(Map<String, dynamic> json) => Template()
+  ..id = json['id'] as String?
+  ..keyword = json['keyword'] as String?
+  ..notes = json['notes'] as String?
+  ..titleEn = json['title_en'] as String?
+  ..titleAr = json['title_ar'] as String?;
+
+Map<String, dynamic> _$TemplateToJson(Template instance) => <String, dynamic>{
+      'id': instance.id,
+      'keyword': instance.keyword,
+      'notes': instance.notes,
+      'title_en': instance.titleEn,
+      'title_ar': instance.titleAr,
+    };
+
+Unit _$UnitFromJson(Map<String, dynamic> json) => Unit()
+  ..unitId = json['unit_id'] as String?
+  ..manualUnitName = json['manual_unit_name'] as String?
+  ..unitCustomNumber = json['unit_custom_number'] as String?
+  ..unitCustomDescription = json['unit_custom_description'] as String?
+  ..unitZone = json['unit_zone']
+  ..unitCluster = json['unit_cluster']
+  ..unitBlock = json['unit_block']
+  ..unitsextra = (json['unitsextra'] as List<dynamic>?)
+      ?.map((e) => UnitsExtra.fromJson(e as Map<String, dynamic>))
+      .toList()
+  ..unitstemplates = (json['unitstemplates'] as List<dynamic>?)
+      ?.map((e) => Template.fromJson(e as Map<String, dynamic>))
+      .toList();
+
+Map<String, dynamic> _$UnitToJson(Unit instance) => <String, dynamic>{
+      'unit_id': instance.unitId,
+      'manual_unit_name': instance.manualUnitName,
+      'unit_custom_number': instance.unitCustomNumber,
+      'unit_custom_description': instance.unitCustomDescription,
+      'unit_zone': instance.unitZone,
+      'unit_cluster': instance.unitCluster,
+      'unit_block': instance.unitBlock,
+      'unitsextra': instance.unitsextra,
+      'unitstemplates': instance.unitstemplates,
+    };
+
+UnitsExtra _$UnitsExtraFromJson(Map<String, dynamic> json) => UnitsExtra()
+  ..unitsExtraGivenTitle = json['units_extra_given_title'] as String?
+  ..unitsExtraKey = json['units_extra_key'] as String?
+  ..unitsExtraValue = json['units_extra_value'] as String?;
+
+Map<String, dynamic> _$UnitsExtraToJson(UnitsExtra instance) =>
+    <String, dynamic>{
+      'units_extra_given_title': instance.unitsExtraGivenTitle,
+      'units_extra_key': instance.unitsExtraKey,
+      'units_extra_value': instance.unitsExtraValue,
+    };
+
+Worklevel _$WorklevelFromJson(Map<String, dynamic> json) => Worklevel()
+  ..id = json['id'] as String?
+  ..titleEn = json['title_en'] as String?
+  ..titleAr = json['title_ar'] as String?
+  ..descriptionEn = json['description_en'] as String?
+  ..descriptionAr = json['description_ar'] as String?;
+
+Map<String, dynamic> _$WorklevelToJson(Worklevel instance) => <String, dynamic>{
+      'id': instance.id,
+      'title_en': instance.titleEn,
+      'title_ar': instance.titleAr,
+      'description_en': instance.descriptionEn,
+      'description_ar': instance.descriptionAr,
+    };
+
+Quantities _$QuantitiesFromJson(Map<String, dynamic> json) => Quantities()
+  ..writerType = json['writer_type'] as String?
+  ..workLevelQuantity = (json['work_level_quantity'] as num?)?.toInt()
+  ..quantitySelected = json['quantity_selected'] as bool?
+  ..writer = json['writer'] == null
+      ? null
+      : Writer.fromJson(json['writer'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$QuantitiesToJson(Quantities instance) =>
+    <String, dynamic>{
+      'writer_type': instance.writerType,
+      'work_level_quantity': instance.workLevelQuantity,
+      'quantity_selected': instance.quantitySelected,
+      'writer': instance.writer,
+    };

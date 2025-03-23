@@ -1,0 +1,26 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'soil_test_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+SoilTestResponse _$SoilTestResponseFromJson(Map<String, dynamic> json) =>
+    SoilTestResponse()
+      ..noSetupWirSoilTest =
+          json['noSetupWIRSoilTestTransactionApproval'] == null
+              ? null
+              : GenericResponse.fromJson(
+                  json['noSetupWIRSoilTestTransactionApproval']
+                      as Map<String, dynamic>)
+      ..wirSoilTest = json['wirSoilTestTransactionApproval'] == null
+          ? null
+          : GenericResponse.fromJson(
+              json['wirSoilTestTransactionApproval'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$SoilTestResponseToJson(SoilTestResponse instance) =>
+    <String, dynamic>{
+      'noSetupWIRSoilTestTransactionApproval': instance.noSetupWirSoilTest,
+      'wirSoilTestTransactionApproval': instance.wirSoilTest,
+    };

@@ -1,0 +1,18 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Paging _$PagingFromJson(Map<String, dynamic> json) => Paging()
+  ..total = (json['total'] as num).toInt()
+  ..currentPage = (json['currentPage'] as num).toInt()
+  ..lastPage = (json['lastPage'] as num).toInt()
+  ..from = (json['from'] as num?)?.toInt()
+  ..to = (json['to'] as num?)?.toInt();
+
+Map<String, dynamic> _$PagingToJson(Paging instance) => <String, dynamic>{
+      'total': instance.total,
+      'currentPage': instance.currentPage,
+      'lastPage': instance.lastPage,
+      'from': instance.from,
+      'to': instance.to,
+    };

@@ -1,0 +1,75 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'transaction_companies.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+TransactionCompanies _$TransactionCompaniesFromJson(
+        Map<String, dynamic> json) =>
+    TransactionCompanies()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..data = (json['data'] as List<dynamic>?)
+          ?.map((e) => CompanyData.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$TransactionCompaniesToJson(
+        TransactionCompanies instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+CompanyData _$CompanyDataFromJson(Map<String, dynamic> json) => CompanyData()
+  ..companyId = json['company_id'] as String?
+  ..company = json['company'] == null
+      ? null
+      : Company.fromJson(json['company'] as Map<String, dynamic>)
+  ..companyPositionId = json['company_position_id'] as String?
+  ..companyPositions = json['companyPositions'] == null
+      ? null
+      : CompanyPositions.fromJson(
+          json['companyPositions'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$CompanyDataToJson(CompanyData instance) =>
+    <String, dynamic>{
+      'company_id': instance.companyId,
+      'company': instance.company,
+      'company_position_id': instance.companyPositionId,
+      'companyPositions': instance.companyPositions,
+    };
+
+Company _$CompanyFromJson(Map<String, dynamic> json) => Company()
+  ..id = json['id'] as String?
+  ..contractorName = json['contractor_name'] as String?
+  ..commercialRegisteration = json['commercial_registeration'] as String?
+  ..vatNumber = json['vat_number'] as String?
+  ..email = json['email'] as String?
+  ..mobile = json['mobile'] as String?
+  ..logo = json['logo'] as String?;
+
+Map<String, dynamic> _$CompanyToJson(Company instance) => <String, dynamic>{
+      'id': instance.id,
+      'contractor_name': instance.contractorName,
+      'commercial_registeration': instance.commercialRegisteration,
+      'vat_number': instance.vatNumber,
+      'email': instance.email,
+      'mobile': instance.mobile,
+      'logo': instance.logo,
+    };
+
+CompanyPositions _$CompanyPositionsFromJson(Map<String, dynamic> json) =>
+    CompanyPositions()
+      ..keyword = json['keyword'] as String?
+      ..titleEn = json['title_en'] as String?
+      ..titleAr = json['title_ar'] as String?;
+
+Map<String, dynamic> _$CompanyPositionsToJson(CompanyPositions instance) =>
+    <String, dynamic>{
+      'keyword': instance.keyword,
+      'title_en': instance.titleEn,
+      'title_ar': instance.titleAr,
+    };

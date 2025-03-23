@@ -1,0 +1,26 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'result_receiving_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ResultReceivingResponse _$ResultReceivingResponseFromJson(
+        Map<String, dynamic> json) =>
+    ResultReceivingResponse()
+      ..noSetupWirResultReceiving = json['noSetupWIRResultReceiving'] == null
+          ? null
+          : GenericResponse.fromJson(
+              json['noSetupWIRResultReceiving'] as Map<String, dynamic>)
+      ..wirResultReceiving = json['wirResultReceiving'] == null
+          ? null
+          : GenericResponse.fromJson(
+              json['wirResultReceiving'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$ResultReceivingResponseToJson(
+        ResultReceivingResponse instance) =>
+    <String, dynamic>{
+      'noSetupWIRResultReceiving': instance.noSetupWirResultReceiving,
+      'wirResultReceiving': instance.wirResultReceiving,
+    };

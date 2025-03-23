@@ -1,0 +1,73 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'transaction_wir_action_buttons.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+TransactionWIRActionButtons _$TransactionWIRActionButtonsFromJson(
+        Map<String, dynamic> json) =>
+    TransactionWIRActionButtons()
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..view = json['view'] == null
+          ? null
+          : View.fromJson(json['view'] as Map<String, dynamic>)
+      ..edit = json['edit'] == null
+          ? null
+          : View.fromJson(json['edit'] as Map<String, dynamic>)
+      ..dataStatus = (json['data_status'] as List<dynamic>?)
+          ?.map((e) => DataStatus.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$TransactionWIRActionButtonsToJson(
+        TransactionWIRActionButtons instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'view': instance.view,
+      'edit': instance.edit,
+      'data_status': instance.dataStatus,
+    };
+
+View _$ViewFromJson(Map<String, dynamic> json) => View()
+  ..configurations = json['configurations'] as bool?
+  ..contractorTeamApproval = json['contractor_team_approval'] as bool?
+  ..contractorManagerApproval = json['contractor_manager_approval'] as bool?
+  ..contractorQaqcApproval = json['contractor_qaqc_approval'] as bool?
+  ..recipientVerification = json['recipient_verification'] as bool?
+  ..technicalAssistant = json['technical_assistant'] as bool?
+  ..soilTestWitnessResult = json['soil_test_witness_result'] as bool?
+  ..specialApproval = json['special_approval'] as bool?
+  ..authorizedPositionsApproval = json['authorized_positions_approval'] as bool?
+  ..managerApproval = json['manager_approval'] as bool?
+  ..ownersRepresentative = json['owners_representative'] as bool?
+  ..pmcApproval = json['pmc_approval'] as bool?
+  ..resultReceiving = json['result_receiving'] as bool?;
+
+Map<String, dynamic> _$ViewToJson(View instance) => <String, dynamic>{
+      'configurations': instance.configurations,
+      'contractor_team_approval': instance.contractorTeamApproval,
+      'contractor_manager_approval': instance.contractorManagerApproval,
+      'contractor_qaqc_approval': instance.contractorQaqcApproval,
+      'recipient_verification': instance.recipientVerification,
+      'technical_assistant': instance.technicalAssistant,
+      'soil_test_witness_result': instance.soilTestWitnessResult,
+      'special_approval': instance.specialApproval,
+      'authorized_positions_approval': instance.authorizedPositionsApproval,
+      'manager_approval': instance.managerApproval,
+      'owners_representative': instance.ownersRepresentative,
+      'pmc_approval': instance.pmcApproval,
+      'result_receiving': instance.resultReceiving,
+    };
+
+DataStatus _$DataStatusFromJson(Map<String, dynamic> json) => DataStatus()
+  ..stepName = json['step_name'] as String?
+  ..dataStatus = json['data_status'] as bool?;
+
+Map<String, dynamic> _$DataStatusToJson(DataStatus instance) =>
+    <String, dynamic>{
+      'step_name': instance.stepName,
+      'data_status': instance.dataStatus,
+    };
